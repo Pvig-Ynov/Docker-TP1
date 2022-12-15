@@ -142,3 +142,4 @@ pierre@pierre-pc:~/VSCODE/Docker-TP1$ docker run --name php-myadmin --link mysql
 ### Faire la même chose que précédemment en utilisant un fichier docker-compose.yml
 
 
+cf fichier docker-compose.yml
