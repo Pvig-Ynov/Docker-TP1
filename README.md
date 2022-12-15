@@ -139,7 +139,11 @@ pierre@pierre-pc:~/VSCODE/Docker-TP1$ docker run --name php-myadmin --link mysql
 02f79e9c76804571fcf2261423c78001a46be135bd00ee427100c2c75a840e0b
 ```
 
-### Faire la même chose que précédemment en utilisant un fichier docker-compose.yml
+## Faire la même chose que précédemment en utilisant un fichier docker-compose.yml
 
 
 cf fichier docker-compose.yml
+
+### A l’aide de docker-compose et de l’image praqma/network-multitool disponible sur le Docker Hub créer 3 services (web, app et db) et 2 réseaux (frontend et backend). es services web et db ne devront pas pouvoir effectuer de ping de l’un vers l’autre
+
+cf ntier-segmented/docker-compose.yml
