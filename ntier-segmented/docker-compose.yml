@@ -1,36 +1,28 @@
 ---
 version: "2.1"
 services:
-  mysql:
-    container_name: mysql
-    image: mysql:5.7
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: Motdepassetùrèssecret
-    networks:
-      - backend
   
-  nginx:
-    container_name: nginx
-    image: nginx
-    volumes:
-    - ./templates:/etc/nginx/templates
-    ports:
-    - "8080:80"
-    environment:
-    - NGINX_HOST=foobar.com
-    - NGINX_PORT=80
-    networks:
-      - frontend
-
-  pragma:
-    container_name: netmtt
+  web:
+    container_name: web
     image: praqma/network-multitool
     networks:
       - frontend
+
+
+  app:
+    container_name: app
+    image: praqma/network-multitool
+    networks:
+
       - backend
+
+  bdd:
+    container_name: bdd
+    image: praqma/network-multitool
+    networks:
+      - backend
+
 
 networks:
    frontend:
    backend:
-    internal: true
