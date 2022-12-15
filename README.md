@@ -131,3 +131,14 @@ ef56affc4552: Pull complete
 Digest: sha256:ae6dadd9cf3c158e42937788f7255fa820ea3daef0349226d8d43f32e76535e1
 Status: Downloaded newer image for phpmyad
 ```
+
+```
+pierre@pierre-pc:~/VSCODE/Docker-TP1$ docker run --name mysql -e MYSQL_ROOT_PASSWORD=Motdepassetùrèssecret -d mysql:5.7
+c3d798d5c56be46dddc8cfdc18840445becf165e84f4c5a771502c1b965e0658
+pierre@pierre-pc:~/VSCODE/Docker-TP1$ docker run --name php-myadmin --link mysql:db -p 8080:80 -d phpmyadmin/phpmyadmin
+02f79e9c76804571fcf2261423c78001a46be135bd00ee427100c2c75a840e0b
+```
+
+### Faire la même chose que précédemment en utilisant un fichier docker-compose.yml
+
+
